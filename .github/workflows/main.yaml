@@ -28,10 +28,8 @@ jobs:
           python -m pip install --upgrade pip
           #pip install ruff pytest
           pip install -r requirements.txt
-          pwd
-          ls
-          ls planarity
-          python -m pip install . || true
+          python --version
+          python -m pip install  --no-clean . || true
           ls planarity
           #python setup.py install
 #      - name: Lint with ruff
