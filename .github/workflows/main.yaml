@@ -31,7 +31,6 @@ jobs:
           pip install -r requirements.txt
           python --version
           python -m pip install  --no-clean . || true
-          ls planarity
           #python setup.py install
 #      - name: Lint with ruff
 #        run: |
