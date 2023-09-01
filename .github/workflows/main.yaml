@@ -31,8 +31,8 @@ jobs:
           pwd
           ls
           ls planarity
-          ls planarity/planarity
           python -m pip install . || true
+          ls planarity
           #python setup.py install
 #      - name: Lint with ruff
 #        run: |
