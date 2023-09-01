@@ -1,10 +1,5 @@
-import os
-import sys
+from setuptools import Extension, setup, find_packages
 
-import setuptools
-from setuptools import setup
-
-from distutils.extension import Extension
 from glob import glob
 
 try:
@@ -14,7 +9,7 @@ except ImportError:
 else:
     USE_CYTHON = True
 
-long_description  = """Graph planarity tools.
+long_description = """Graph planarity tools.
 A wrapper to Boyer's (C) planarity algorithms: http://code.google.com/p/planarity/
 
 Provides planarity testing, forbidden subgraph finding, and planar embeddings.
@@ -52,24 +47,23 @@ if USE_CYTHON:
     extensions = cythonize(extensions)
 
 setup(
-    name= 'planarity',
-    packages=setuptools.find_packages(),
-    maintainer = 'Aric Hagberg',
-    maintainer_email = 'aric.hagberg@gmail.com',
-    author = 'Aric Hagberg',
-    author_email = 'aric.hagberg@gmail.com',
-    description = 'Graph planarity tools.',
-    classifiers = classifiers,
-    long_description = long_description,
-    license = 'BSD',
-    ext_modules = extensions,
-    version          = '0.4.1',
-    url = 'https://github.com/hagberg/planarity/',
+    name='planarity',
+    packages=find_packages(),
+    maintainer='Aric Hagberg',
+    maintainer_email='aric.hagberg@gmail.com',
+    author='Aric Hagberg',
+    author_email='aric.hagberg@gmail.com',
+    description='Graph planarity tools.',
+    classifiers=classifiers,
+    long_description=long_description,
+    license='BSD',
+    ext_modules=extensions,
+    version='0.4.1',
+    url='https://github.com/hagberg/planarity/',
     download_url='https://pypi.python.org/pypi/planarity',
-    package_data = {'planarity':['tests/*.py']},
+    package_data={'planarity': ['tests/*.py']},
         install_requires=['setuptools'],
-        test_suite = 'nose.collector', 
-        tests_require = ['nose >= 0.10.1'] ,
-        zip_safe = False
+        test_suite='nose.collector',
+        tests_require=['nose >= 0.10.1'],
+        zip_safe=False
     )
-
