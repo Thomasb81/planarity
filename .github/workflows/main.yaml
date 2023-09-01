@@ -21,14 +21,13 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update -qq
-          sudo apt install -y build-essential 
+          sudo apt install -y build-essential cython3 
 
       - name: Install python dependencies
         run: |
           python -m pip install --upgrade pip
           #pip install ruff pytest
           pip install -r requirements.txt
-          ls 
           python3 -m pip install -e .
 #      - name: Lint with ruff
 #        run: |
