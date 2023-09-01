@@ -1,5 +1,5 @@
 setuptools
-wheels
+wheel
 cython
 networkx
 matplotlib
