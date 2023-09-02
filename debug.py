@@ -1,5 +1,6 @@
 import sys
+import planarity
 sys.path = sys.path[1:]
 print(sys.path)
-import planarity
+print(dir(planarity))
 
