@@ -40,4 +40,5 @@ jobs:
 #          ruff --format=github --target-version=py37 .
       - name: Test with pytest
         run: |
-          pytest
+          python debug.py
+          pytest -vv
