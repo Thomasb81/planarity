@@ -2,8 +2,6 @@ import os
 import tempfile
 
 import planarity
-import sys
-print(sys.path)
 
 class TestPlanarity:
     @classmethod

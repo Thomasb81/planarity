@@ -34,12 +34,12 @@ classifiers = [
 
 ext = '.pyx' if USE_CYTHON else '.c'
 
-sourcefiles = ['planarity/planarity'+ext]
-sourcefiles.extend(glob("planarity/src/*.c"))
+sourcefiles = ['src/planarity/planarity'+ext]
+sourcefiles.extend(glob("src/planarity/src/*.c"))
 
 extensions = [Extension("planarity.planarity",
                         sourcefiles,
-                        include_dirs=['planarity/src/'],
+                        include_dirs=['src/planarity/src/'],
                         )]
 
 if USE_CYTHON:
@@ -61,9 +61,9 @@ setup(
     version='0.4.1',
     url='https://github.com/hagberg/planarity/',
     download_url='https://pypi.python.org/pypi/planarity',
-    package_data={'planarity': ['tests/*.py']},
-        install_requires=['setuptools'],
-        test_suite='nose.collector',
-        tests_require=['nose >= 0.10.1'],
-        zip_safe=False
+    #package_data={'planarity': ['tests/*.py']},
+    #    install_requires=['setuptools'],
+    #    test_suite='nose.collector',
+    #    tests_require=['nose >= 0.10.1'],
+    zip_safe=False
     )

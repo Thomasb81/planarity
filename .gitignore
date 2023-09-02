@@ -5,7 +5,7 @@ __pycache__
 build/*
 .coverage
 *.class
-planarity/planarity.c
+src/planarity/planarity.c
 
 dist/
 planarity.egg-info/
